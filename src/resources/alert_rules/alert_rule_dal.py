@@ -1,10 +1,29 @@
-""" Alert Rule  DAL"""
-"""_summary_
-this file is to right any ORM logic for the Alert Rule model
-"""
-# from resources.alert_rules.alert_rule_schema import AlertRuleCreate
-# from db.models import AlertRule
+from db.models.models import AlertRule
 
-# def create_alert_rule( rule: AlertRuleCreate, session ):
-#     new_rule = AlertRule()
-#     session.add(new_rule)
+
+def create_alert_rule(db, rule):
+    db.add(rule)
+    db.commit()
+    db.refresh(rule)
+    return rule
+
+
+def get_all_alert_rules(db):
+    return db.query(AlertRule).all()
+
+
+def get_alert_rule_by_id(db, id):
+    return db.query(AlertRule).filter(AlertRule.id == id).first()
+
+
+def update_alert_rule(db, db_rule, updated_data):
+    for key, value in updated_data.items():
+        setattr(db_rule, key, value)
+    db.commit()
+    db.refresh(db_rule)
+    return db_rule
+
+
+def delete_alert_rule(db, db_rule):
+    db.delete(db_rule)
+    db.commit()
