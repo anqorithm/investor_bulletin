@@ -16,7 +16,7 @@ services:
   #   volumes:
   #     - ./app:/app
   #   ports:
-  #     - "5000:5000"
+  #     - "9000:9000"
   #   networks:
   #     - internal_nw
   #   depends_on:

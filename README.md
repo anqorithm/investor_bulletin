@@ -20,6 +20,7 @@
 - **ORM**: [SQLAlchemy](https://fastapi.tiangolo.com/advanced/async-sql-databases/?h=sqlalchemy#import-and-set-up-sqlalchemy)
 - **Database**: [CockroachDB](https://www.cockroachlabs.com/)
 - **Schema Validation**: [Pydantic](https://fastapi.tiangolo.com/tutorial/body-nested-models/)
+- **Database Migrations**: [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 
 
 ## Prerequisites
