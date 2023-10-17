@@ -60,13 +60,20 @@ The objective of this project is to build a FastAPI server that retrieves the la
 ## Usage
 Provide instructions on how to run the project, including any environment variables that need to be set, API authentication, and any other relevant details.
 
-Example:
 ```bash
 # Clone the repository
 $ git clone https://github.com/qahta0/investor_bulletin
 
 # CD to the repository
 $ cd investor_bulletin
+
+# Move .env.example to .env
+$ mv .env.example .env
+
+# Fill the environment variables in the .env file
+RAPIDAPI_KEY=
+RAPIDAPI_HOST=
+DATABASE_URL=
 
 # Install dependencies
 pip install -r requirements.txt
