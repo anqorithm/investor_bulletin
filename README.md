@@ -1,6 +1,6 @@
 # Investor Bulletin
 
-![Project Image](./assets/image1.gif)
+<img src="./assets/image1.gif" alt="Project Image" width="1000">
 
 ## Table of Contents
 - [Technology Used](#technology-used)
@@ -43,14 +43,18 @@ The objective of this project is to build a FastAPI server that retrieves the la
 - Get a list of all alerts.
 
 ## Routes and Descriptions
-| **Route**              | **Description**                                                            |
-|------------------------|----------------------------------------------------------------------------|
-| `GET /market-prices`   | Returns the latest market prices for mentioned symbols (AAPL, MSFT, GOOG, AMZN, META). |
-| `POST /alert-rules`    | Creates an alert rule with properties: name, threshold price, and symbol.   |
-| `PATCH /alert-rules/{id}` | Updates an alert rule by ID.                                           |
-| `DELETE /alert-rules/{id}` | Deletes an alert rule by ID.                                           |
-| `GET /alert-rules`     | Returns a list of all alert rules.                                        |
-| `GET /alerts`          | Returns a list of all alerts.                                            |
+| HTTP Method | Route                | Description                                                           |
+|-------------|----------------------|-----------------------------------------------------------------------|
+| GET         | `/market-prices`     | Returns the latest market prices for mentioned symbols (AAPL, MSFT, GOOG, AMZN, META). |
+| POST        | `/alert-rules`       | Creates an alert rule with properties:                                 |
+|             |                      | - `name`: Name of the alert rule.                                     |
+|             |                      | - `threshold_price`: Threshold price for triggering the alert.          |
+|             |                      | - `symbol`: Symbol associated with the alert.                          |
+| PATCH       | `/alert-rules/{id}`  | Updates an alert rule by ID.                                          |
+| DELETE      | `/alert-rules/{id}`  | Deletes an alert rule by ID.                                          |
+| GET         | `/alert-rules`       | Returns a list of all alert rules.                                     |
+| GET         | `/alerts`            | Returns a list of all alerts.                                         |
+
 
 
 ## Usage
