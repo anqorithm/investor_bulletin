@@ -1,4 +1,5 @@
 from db.models.models import AlertRule
+from datetime import datetime
 
 
 def create_alert_rule(db, rule):
@@ -25,5 +26,5 @@ def update_alert_rule(db, db_rule, updated_data):
 
 
 def delete_alert_rule(db, db_rule):
-    db.delete(db_rule)
+    db_rule.deleted_at = datetime.utcnow()
     db.commit()

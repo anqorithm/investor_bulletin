@@ -13,12 +13,8 @@ def get_api_headers():
         'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': API_HOST
     }
-
     return headers
 
 
 def load_environment_variables():
-    """
-    Load environment variables from a .env file.
-    """
     load_dotenv()
