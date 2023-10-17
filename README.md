@@ -10,6 +10,7 @@
 - [Routes and Descriptions](#routes-and-descriptions)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -89,3 +90,14 @@ $ alembic upgrade head
 
 # Stop underling infrastructure
 $ make down | chmod a+x down | ./down
+
+![Alt text](image.png)
+
+```
+
+## Testing
+
+
+When you visit `http://127.0.0.1:8000/docs`, you'll find a concise list of available endpoints
+
+<img src="./assets/swaggerRoutes.png" alt="Project Image" width="1000">
