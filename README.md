@@ -91,8 +91,6 @@ $ alembic upgrade head
 # Stop underling infrastructure
 $ make down | chmod a+x down | ./down
 
-![Alt text](image.png)
-
 ```
 
 ## Testing
