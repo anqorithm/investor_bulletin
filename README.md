@@ -92,7 +92,7 @@ $ make up | chmod a+x up | ./up
 # Run the FastAPI server
 $ cd src && uvicorn api.main:app --reload
 
-# Run alembic migrations
+# Run alembic migrations & seeders
 $ alembic upgrade head
 
 # Stop underling infrastructure
