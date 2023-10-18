@@ -60,7 +60,7 @@ The objective of this project is to build a FastAPI server that retrieves the la
 | GET         | `/api/v1/alert-rules`       | Returns a list of all alert rules.                                     |
 | GET         | `/api/v1/alerts`            | Returns a list of all alerts.                                         |
 
-## Logic workflow
+## Logic Workflow
 
 <img src="./assets/workflow.png" alt="workflow">
 
