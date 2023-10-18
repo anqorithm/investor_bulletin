@@ -5,4 +5,5 @@ router = APIRouter()
 
 @router.get('/')
 def get_market_data_route():
+    """Fetch all alerts"""
     return get_market_data_serivce()
