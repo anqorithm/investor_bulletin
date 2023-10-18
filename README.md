@@ -37,16 +37,19 @@ Before you begin, ensure you have met the following requirements:
 The objective of this project is to build a FastAPI server that retrieves the latest stock market prices from an external resource (Rapid API - Twelvedata) and allows users to manage custom alert rules by persisting them in a database.
 
 ## Functionality
-- Retrieve the latest market prices for specific symbols (AAPL, MSFT, GOOG, AMZN, META).
-- Create alert rules with properties: name, threshold price, and symbol.
-- Update alert rules by ID.
-- Delete alert rules by ID.
-- Get a list of all alert rules.
-- Get a list of all alerts.
+- Retrieve the latest market prices for specific symbols (AAPL, MSFT, GOOG, AMZN, META) ✅.
+- Create alert rules with properties: name, threshold price, and symbol ✅.
+- Update alert rules by ID ✅.
+- Delete alert rules by ID ✅.
+- Get a list of all alert rules ✅.
+- Get a list of all alerts ✅.
+- 
 
 ## Routes and Descriptions
 | HTTP Method | Route                | Description                                                           |
 |-------------|----------------------|-----------------------------------------------------------------------|
+| GET         | `/health`            | Health check endpoint to ensure the service is running properly.     |
+| GET         | `/`            | Root endpoint.     |
 | GET         | `/market-prices`     | Returns the latest market prices for mentioned symbols (AAPL, MSFT, GOOG, AMZN, META). |
 | POST        | `/alert-rules`       | Creates an alert rule with properties:                                 |
 |             |                      | - `name`: Name of the alert rule.                                     |
@@ -86,7 +89,7 @@ $ make up | chmod a+x up | ./up
 # Run the FastAPI server
 $ cd src && uvicorn api.main:app --reload
 
-# Run alembic migration
+# Run alembic migrations
 $ alembic upgrade head
 
 # Stop underling infrastructure
