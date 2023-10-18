@@ -19,13 +19,20 @@ router = APIRouter()
 @router.get("/")
 def get_all_alert_rules_route(db: Session = Depends(get_session)):
     """Fetch all alert rules"""
-    return get_all_alert_rules_service(db)
+    try:
+        return get_all_alert_rules_service(db)
+    except Exception:
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_alert_rule_route(rule: AlertRuleCreate, db: Session = Depends(get_session)):
     """Create a new alert rule"""
-    return create_alert_rule_service(rule, db)
+    try:
+        return create_alert_rule_service(rule, db)
+    except Exception:
+        raise HTTPException(
+            status_code=500, detail="Failed to create a new rule")
 
 
 @router.get("/{id}")
@@ -44,15 +51,15 @@ def update_alert_rule_route(id: int, rule: AlertRuleUpdate, db: Session = Depend
     updated_rule = update_alert_rule_service(id, rule, db)
     if not updated_rule:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail="Rule not found")
+            status_code=status.HTTP_404_NOT_FOUND, detail="Rule not found for update")
     return updated_rule
 
 
-@router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{id}")
 def delete_alert_rule_route(id: int, db: Session = Depends(get_session)):
     """Delete a specific alert rule by its ID"""
     deleted_rule = delete_alert_rule_service(id, db)
     if not deleted_rule:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail="Rule not found")
+            status_code=status.HTTP_404_NOT_FOUND, detail="Rule not found for deletion")
     return {"detail": "Rule deleted successfully"}

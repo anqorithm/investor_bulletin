@@ -5,6 +5,7 @@ from api.controllers.general_controller import router as GeneralAlertController
 
 
 def init_routes(app):
+    """Initialize routes for the application"""
     app.include_router(
         GeneralAlertController, tags=["General"])
     app.include_router(

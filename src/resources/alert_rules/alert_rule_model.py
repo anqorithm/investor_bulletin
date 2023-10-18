@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship
 
 
 class AlertRule(Base):
+    """Alert rule model"""
     __tablename__ = "alert_rules"
 
     id = Column(Integer, primary_key=True, index=True)

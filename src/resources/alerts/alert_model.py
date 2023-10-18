@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship
 
 
 class Alert(Base):
+    """Alert model"""
     __tablename__ = 'alerts'
 
     id = Column(Integer, primary_key=True)

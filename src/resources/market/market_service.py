@@ -1,19 +1,17 @@
-""" Market Service """
-"""_summary_
-this file to write any business logic for the Market
-"""
-
-
-
-
+from utils import api
 import http.client
 import json
-from utils import utils
-import http.client
-import json
-from utils import utils
+
+from utils.api import get_api_headers
+
+
 def get_market_data_serivce():
-    headers = utils.get_api_headers()
+    """"""
+    headers = headers_to_fetch = {
+        'X-RapidAPI-Key': 'RAPIDAPI_KEY',
+        'X-RapidAPI-Host': 'RAPIDAPI_HOST'
+    }
+    headers = get_api_headers(headers_to_fetch)
     symbols = ["AAPL", "MSFT", "GOOG", "AMZN", "META"]
     market_data = {}
     for symbol in symbols:
