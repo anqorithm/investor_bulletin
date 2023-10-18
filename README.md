@@ -51,15 +51,15 @@ The objective of this project is to build a FastAPI server that retrieves the la
 |-------------|----------------------|-----------------------------------------------------------------------|
 | GET         | `/health`            | Health check endpoint to ensure the service is running properly.     |
 | GET         | `/`            | Root endpoint.     |
-| GET         | `/market-prices`     | Returns the latest market prices for mentioned symbols (AAPL, MSFT, GOOG, AMZN, META). |
-| POST        | `/alert-rules`       | Creates an alert rule with properties:                                 |
+| GET         | `/api/v1/market-prices`     | Returns the latest market prices for mentioned symbols (AAPL, MSFT, GOOG, AMZN, META). |
+| POST        | `/api/v1/alert-rules`       | Creates an alert rule with properties:                                 |
 |             |                      | - `name`: Name of the alert rule.                                     |
 |             |                      | - `threshold_price`: Threshold price for triggering the alert.          |
 |             |                      | - `symbol`: Symbol associated with the alert.                          |
-| PATCH       | `/alert-rules/{id}`  | Updates an alert rule by ID.                                          |
-| DELETE      | `/alert-rules/{id}`  | Deletes an alert rule by ID.                                          |
-| GET         | `/alert-rules`       | Returns a list of all alert rules.                                     |
-| GET         | `/alerts`            | Returns a list of all alerts.                                         |
+| PATCH       | `/api/v1/alert-rules/{id}`  | Updates an alert rule by ID.                                          |
+| DELETE      | `/api/v1/alert-rules/{id}`  | Deletes an alert rule by ID.                                          |
+| GET         | `/api/v1/alert-rules`       | Returns a list of all alert rules.                                     |
+| GET         | `/api/v1/alerts`            | Returns a list of all alerts.                                         |
 
 
 
