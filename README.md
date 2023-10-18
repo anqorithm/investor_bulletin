@@ -10,6 +10,7 @@
 - [Routes and Descriptions](#routes-and-descriptions)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Logic Workflow](#logic-workflow)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
@@ -61,6 +62,9 @@ The objective of this project is to build a FastAPI server that retrieves the la
 | GET         | `/api/v1/alert-rules`       | Returns a list of all alert rules.                                     |
 | GET         | `/api/v1/alerts`            | Returns a list of all alerts.                                         |
 
+## Logic workflow
+
+<img src="./assets/workflow.svg" alt="Project Image" width="1000">
 
 
 ## Usage
