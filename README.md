@@ -1,6 +1,6 @@
 # Investor Bulletin
 
-<img src="./assets/image1.gif" alt="Project Image" width="1000">
+<img src="./assets/projectImage.gif" alt="project image" width="1000">
 
 ## Table of Contents
 - [Technology Used](#technology-used)
@@ -13,8 +13,6 @@
 - [Logic Workflow](#logic-workflow)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Technology Used
 - **Web Server**: [FastAPI](https://fastapi.tiangolo.com/)
@@ -64,7 +62,7 @@ The objective of this project is to build a FastAPI server that retrieves the la
 
 ## Logic workflow
 
-<img src="./assets/workflow.svg" alt="Project Image" width="1000">
+<img src="./assets/workflow.png" alt="workflow">
 
 
 ## Usage
@@ -107,4 +105,4 @@ $ make down | chmod a+x down | ./down
 
 When you visit `http://127.0.0.1:8000/docs`, you'll find a concise list of available endpoints
 
-<img src="./assets/swaggerRoutes.png" alt="Project Image" width="1000">
+<img src="./assets/swaggerRoutes.png" alt="swagger routes" width="1000">
