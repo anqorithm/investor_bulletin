@@ -73,7 +73,7 @@ Provide instructions on how to run the project, including any environment variab
 $ git clone https://github.com/qahta0/investor_bulletin
 
 # CD to the repository
-$ cd investor_bulletin
+$ cd investor_bulletin/src
 
 # Move .env.example to .env
 $ mv .env.example .env
@@ -87,7 +87,7 @@ DATABASE_URL=
 pip install -r requirements.txt
 
 # Run underling infrastructure
-$ make up | chmod a+x up | ./up
+$ cd dev_setup/ && make up && chmod a+x up && ./up
 
 # Run the FastAPI server
 $ cd src && uvicorn api.main:app --reload
@@ -96,7 +96,7 @@ $ cd src && uvicorn api.main:app --reload
 $ alembic upgrade head
 
 # Stop underling infrastructure
-$ make down | chmod a+x down | ./down
+$ cd dev_setup/ && make down && chmod a+x down && ./down
 
 ```
 
