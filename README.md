@@ -82,6 +82,10 @@ $ mv .env.example .env
 RAPIDAPI_KEY=
 RAPIDAPI_HOST=
 DATABASE_URL=
+RABBITMQ_HOST=
+RABBITMQ_USER=
+RABBITMQ_PASSWORD=
+RABBITMQ_QUEUE=
 
 # Install dependencies
 pip install -r requirements.txt
