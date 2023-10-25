@@ -42,8 +42,8 @@ The objective of this project is to build a FastAPI server that retrieves the la
 - Delete alert rules by ID ✅.
 - Get a list of all alert rules ✅.
 - Get a list of all alerts ✅.
-- Integrate RabbitMQ for message handling ⌛.
-- Support background task execution ⌛.
+- Integrate RabbitMQ for message handling ✅.
+- Support background task execution ✅.
 
 ## Routes and Descriptions
 | HTTP Method | Route                | Description                                                           |
