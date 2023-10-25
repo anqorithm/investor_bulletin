@@ -31,9 +31,9 @@ def upgrade() -> None:
             sa.Column('deleted_at', sa.DateTime(timezone=True))
         ),
         [
-            {"id": 1, "name": "Apple Price Drop", "threshold_price": 100.0, "symbol": "AAPL",
+            {"id": 1, "name": "Apple", "threshold_price": 100.0, "symbol": "AAPL",
                 "created_at": datetime.utcnow(), "updated_at": datetime.utcnow()},
-            {"id": 2, "name": "Tesla Price Surge", "threshold_price": 700.0, "symbol": "TSLA",
+            {"id": 2, "name": "Google", "threshold_price": 700.0, "symbol": "GOOG",
                 "created_at": datetime.utcnow(), "updated_at": datetime.utcnow()}
         ]
     )
