@@ -102,11 +102,40 @@ $ alembic upgrade head
 # Stop underling infrastructure
 $ cd dev_setup/ && make down && chmod a+x down && ./down
 
+$ export PYTHONPATH=$PYTHONPATH:{YOUR_PATH}/investor_bulletin/src/
+
+# Publish event on RabbitMQ
+$ python3 core/messaging.py
+
+# Start RabbitMQ Consumer 
+$ python3 event_subscriber/main.py
+
+# Run Celery Worker
+$ cd worker/ && celery -A app.celery_app worker --loglevel=info
+
+# Run Celery Beat
+$ cd worker/ && celery -A app.celery_app beat --loglevel=info
+
 ```
 
 ## Testing
 
-
 When you visit `http://127.0.0.1:8000/docs`, you'll find a concise list of available endpoints
 
-<img src="./assets/swaggerRoutes.png" alt="swagger routes" width="1000">
+<img src="./assets/swaggerRoutes.png" alt="Swagger Routes" width="1000">
+
+You can also visit the database portal for CockroachDB through `http://localhost:8080`
+
+<img src="./assets/cockroachDBPortal.png" alt="CockroachDB Portal" width="1000">
+
+Also you can visit the RabbitMQ portal through `http://localhost:15672/`
+
+<img src="./assets/rabbitMQPortal.png" alt="RabbitMQ Portal" width="1000">
+
+After running the Celery Worker you should see the following in your terminal
+
+<img src="./assets/celeryWorker.png" alt="Celery Worker" width="1000">
+
+Also after running the Celery Beat you should see the following in your terminal
+
+<img src="./assets/celeryBeat.png" alt="Celery Beat" width="1000">
