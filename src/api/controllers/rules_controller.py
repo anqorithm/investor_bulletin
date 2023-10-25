@@ -30,6 +30,8 @@ async def create_alert_rule_route(rule: AlertRuleCreate, db: Session = Depends(g
     """Create a new alert rule"""
     try:
         return create_alert_rule_service(rule, db)
+    except HTTPException as e:
+        raise e
     except Exception:
         raise HTTPException(
             status_code=500, detail="Failed to create a new rule")

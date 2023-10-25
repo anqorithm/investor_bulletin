@@ -7,14 +7,22 @@ from resources.alert_rules.alert_rule_dal import (
     delete_alert_rule
 )
 
+from sqlalchemy.orm import Session
+from fastapi import HTTPException
 
-def get_all_alert_rules_service(db):
+ALLOWED_SYMBOLS = {"AAPL", "MSFT", "GOOG", "AMZN", "META"}
+
+
+def get_all_alert_rules_service(db: Session):
     """Fetches all alert rules from the database"""
     return get_all_alert_rules(db)
 
 
 def create_alert_rule_service(rule_data, db):
     """Creates a new alert rule based on provided data"""
+    if rule_data.symbol not in ALLOWED_SYMBOLS:
+        raise HTTPException(
+            status_code=400, detail=f"Symbol '{rule_data.symbol}' is not allowed! only '{ALLOWED_SYMBOLS}'")
     rule = AlertRule(**rule_data.dict())
     return create_alert_rule(db, rule)
 

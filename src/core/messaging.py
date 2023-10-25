@@ -1,4 +1,5 @@
 import os
+import json
 from amqpstorm import Connection, Message
 from dotenv import load_dotenv
 load_dotenv()
@@ -13,8 +14,12 @@ channel = connection.channel()
 channel.queue.declare(RABBITMQ_QUEUE)
 
 
-def publish_threshold_alert(message_body='THRESHOLD_ALERT'):
-    message = Message.create(channel, message_body)
+def publish_threshold_alert(message_body='THRESHOLD_ALERT', data=None):
+    message_content = {'type': message_body}
+    if data:
+        message_content.update(data)
+    message_string = json.dumps(message_content)
+    message = Message.create(channel, message_string)
     message.publish(RABBITMQ_QUEUE)
 
 
