@@ -5,7 +5,7 @@ import json
 from utils.api import get_api_headers
 
 
-def get_market_data_serivce():
+def get_market_data_service():
     """"""
     headers = headers_to_fetch = {
         'X-RapidAPI-Key': 'RAPIDAPI_KEY',
