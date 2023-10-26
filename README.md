@@ -32,6 +32,8 @@ Before you begin, ensure you have met the following requirements:
 
 - **Docker**: Ensure you have Docker installed on your system. You can download and install Docker from [Docker's official website](https://www.docker.com/get-started).
 
+- **Shell Access**: For those on macOS or Linux, you'll be using your terminal. Windows users should go with Windows Subsystem for Linux (WSL) or use Bash for a compatible shell experience. If you're new to WSL, [here's a guide to get started](https://learn.microsoft.com/en-us/windows/wsl/install).
+
 
 ## Notes
 
