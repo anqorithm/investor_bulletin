@@ -14,7 +14,6 @@
 - [Logic Workflow](#logic-workflow)
 - [System Workflow](#system-workflow)
 - [Testing](#testing)
-- [Project Structure](#project-structure)
 
 ## Technology Used
 - **Web Server**: [FastAPI](https://fastapi.tiangolo.com/)
