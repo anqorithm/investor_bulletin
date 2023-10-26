@@ -5,6 +5,7 @@
 ## Table of Contents
 - [Technology Used](#technology-used)
 - [Prerequisites](#prerequisites)
+- [Notes](#notes)
 - [Objectives](#objectives)
 - [Functionality](#functionality)
 - [Routes and Descriptions](#routes-and-descriptions)
@@ -30,6 +31,11 @@ Before you begin, ensure you have met the following requirements:
 - **Twelvedata API Key**: Create an account and obtain an API key from [Twelvedata](https://rapidapi.com/twelvedata/api/twelve-data1) or your preferred stock data API provider.
 
 - **Docker**: Ensure you have Docker installed on your system. You can download and install Docker from [Docker's official website](https://www.docker.com/get-started).
+
+
+## Notes
+
+- ⚠️🚨 Caution: When querying **Twelvedata API**, stay within the 800 requests/day limit to avoid issues (429 HTTP Code Status - Too Many Requests).
 
 
 ## Objectives
