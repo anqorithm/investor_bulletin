@@ -1,8 +1,14 @@
-# app.py
+""" Celery Application Creation """
+"""_summary_
+This script sets up a Celery application with a task schedule. 
+It creates a Celery worker that will run the `check_thresholds` task every 5 minutes.
+"""
+
+
+
+
 from celery import Celery
 from datetime import timedelta
-
-
 def create_celery_app():
     app = Celery(
         'tasks',

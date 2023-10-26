@@ -1,10 +1,16 @@
-from app import celery_app
+""" Market Threshold Checker """
+"""_summary_
+This script uses a Celery task to check market prices and triggers alerts if predefined thresholds are reached.
+"""
+
+
+
+
+from worker.app import celery_app
 from resources.market.market_service import get_market_data_service
 from resources.alert_rules.alert_rule_service import get_all_alert_rules_service
 from core.messaging import publish_threshold_alert
 from db.session import get_session
-
-
 @celery_app.task
 def check_thresholds():
     try:

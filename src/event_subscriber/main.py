@@ -1,3 +1,9 @@
+""" RabbitMQ Event Subscriber """
+"""_summary_
+This script sets up a RabbitMQ subscriber to listen for incoming messages.
+"""
+
+
 import os
 from pika import BlockingConnection, ConnectionParameters
 from resources.alerts.alert_service import create_threshold_alert_event_record

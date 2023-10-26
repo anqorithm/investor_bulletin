@@ -1,12 +1,11 @@
-from utils import api
 import http.client
 import json
-
 from utils.api import get_api_headers
+import os
 
 
 def get_market_data_service():
-    """"""
+    """Fetches market data for specific stocks from the TweelfAPI."""
     headers = headers_to_fetch = {
         'X-RapidAPI-Key': 'RAPIDAPI_KEY',
         'X-RapidAPI-Host': 'RAPIDAPI_HOST'
@@ -16,7 +15,8 @@ def get_market_data_service():
     market_data = {}
     for symbol in symbols:
         endpoint = f"/price?&symbol={symbol}&outputsize=30&format=json"
-        conn = http.client.HTTPSConnection("twelve-data1.p.rapidapi.com")
+        rapidapi_host = os.getenv('RAPIDAPI_HOST')
+        conn = http.client.HTTPSConnection(rapidapi_host)
         try:
             conn.request("GET", endpoint, headers=headers)
             response = conn.getresponse()

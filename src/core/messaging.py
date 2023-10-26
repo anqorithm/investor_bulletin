@@ -1,3 +1,9 @@
+""" RabbitMQ Publisher """
+"""_summary_
+This script to connect to RabbitMQ and publish a 'THRESHOLD_ALERT' event.
+"""
+
+
 import os
 import json
 from amqpstorm import Connection, Message
