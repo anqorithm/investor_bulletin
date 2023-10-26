@@ -22,7 +22,7 @@
 - **Database**: [CockroachDB](https://www.cockroachlabs.com/)
 - **Schema Validation**: [Pydantic](https://fastapi.tiangolo.com/tutorial/body-nested-models/)
 - **Database Migrations**: [Alembic](https://alembic.sqlalchemy.org/en/latest/)
-
+- **Message Broker**: [RabbitMQ](https://www.rabbitmq.com/)
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
