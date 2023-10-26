@@ -130,6 +130,23 @@ You can also visit the database portal for CockroachDB through `http://localhost
 
 Also you can visit the RabbitMQ portal through `http://localhost:15672/`
 
+If you want to test the RabbitMQ publisher you can run the following command
+
+```sh
+$ python3 core/messaging.py
+```
+
+<img src="./assets/eventPublisher.png" alt="RabbitMQ Publisher" width="1000">
+
+
+If you want to test the RabbitMQ subscriber you can run the following command
+
+```sh
+$ python3 event_subscriber/main.py
+```
+<img src="./assets/eventSubscriber.png" alt="RabbitMQ Subscriber" width="1000">
+
+
 <img src="./assets/rabbitMQPortal.png" alt="RabbitMQ Portal" width="1000">
 
 After running the Celery Worker you should see the following in your terminal
