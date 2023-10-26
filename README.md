@@ -174,3 +174,4 @@ After running the Celery Worker you should see the following in your terminal
 Also after running the Celery Beat you should see the following in your terminal
 
 <img src="./assets/celeryBeat.png" alt="Celery Beat" width="1000">
+
