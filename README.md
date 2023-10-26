@@ -12,6 +12,7 @@
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Logic Workflow](#logic-workflow)
+- [System Workflow](#system-workflow)
 - [Testing](#testing)
 - [Project Structure](#project-structure)
 
@@ -68,8 +69,12 @@ The objective of this project is to build a FastAPI server that retrieves the la
 
 ## Logic Workflow
 
-<img src="./assets/workflow.png" alt="workflow">
+<img src="./assets/logicWorkflow.png" alt="Logic Workflow">
 
+
+## System Overview Workflow
+
+<img src="./assets/systemOverviewWorkflow.svg" alt="System Workflow">
 
 ## Usage
 Provide instructions on how to run the project, including any environment variables that need to be set, API authentication, and any other relevant details.
