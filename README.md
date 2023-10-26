@@ -97,8 +97,14 @@ RABBITMQ_USER=
 RABBITMQ_PASSWORD=
 RABBITMQ_QUEUE=
 
+# Create Python Virtualenv
+$ python3 -m venv investor_bulletin
+
+# Activate Python Virtualenv
+$ source investor_bulletin/bin/activate
+
 # Install dependencies
-pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 
 # Run underling infrastructure
 $ cd dev_setup/ && make up && chmod a+x up && ./up
