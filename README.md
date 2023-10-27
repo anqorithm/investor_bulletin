@@ -9,10 +9,9 @@
 - [Objectives](#objectives)
 - [Functionality](#functionality)
 - [Routes and Descriptions](#routes-and-descriptions)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Logic Workflow](#logic-workflow)
-- [System Workflow](#system-workflow)
+- [System Overview Workflow](#system-overview-workflow)
 - [Testing](#testing)
 
 ## Technology Used
