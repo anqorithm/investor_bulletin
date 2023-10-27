@@ -168,10 +168,10 @@ $ python3 event_subscriber/main.py
 
 <img src="./assets/rabbitMQPortal.png" alt="RabbitMQ Portal" width="1000">
 
-After running the Celery Worker you should see the following in your terminal
+After running the Celery Worker you should see the following in your terminal using the following command `cd worker/ && celery -A app.celery_app worker --loglevel=info`
 
 <img src="./assets/celeryWorker.png" alt="Celery Worker" width="1000">
 
-Also after running the Celery Beat you should see the following in your terminal
+Also after running the Celery Beat you should see the following in your terminal using the following command `cd worker/ && celery -A app.celery_app beat --loglevel=info`
 
 <img src="./assets/celeryBeat.png" alt="Celery Beat" width="1000">
