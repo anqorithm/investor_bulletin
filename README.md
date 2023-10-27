@@ -21,8 +21,8 @@
 - **Schema Validation**: [Pydantic](https://fastapi.tiangolo.com/tutorial/body-nested-models/)
 - **Database Migrations**: [Alembic](https://alembic.sqlalchemy.org/en/latest/)
 - **Message Broker**: [RabbitMQ](https://www.rabbitmq.com/)
-- **Job Scheduling***:[Celery Worker](https://docs.celeryq.dev/en/stable/userguide/workers.html)
-- **Job Execution**:[Celery Beat](https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html)
+- **Job Scheduling**: [Celery Worker](https://docs.celeryq.dev/en/stable/userguide/workers.html)
+- **Job Execution**: [Celery Beat](https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html)
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
